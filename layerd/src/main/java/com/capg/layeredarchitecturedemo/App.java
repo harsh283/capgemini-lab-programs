@@ -1,4 +1,4 @@
-package com.capg.layerd;
+package com.capg.layeredarchitecturedemo;
 
 /**
  * Hello world!
