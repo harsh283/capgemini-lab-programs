@@ -37,15 +37,43 @@ public class App
         	switch(choice)
         	{
         	case 1:
-        		scan=new Scanner(System.in);
-        		System.out.println("Enter the id");
-        		int id =scan.nextInt();
+        		
+        		boolean flag1=false;
+        		int id=0;
+        		do {        
+        			scan=new Scanner(System.in);
+            		System.out.println("Enter the id");
+        			try {
+        				 id=scan.nextInt();
+                		flag=true;
+        				
+        		}
+        			catch (InputMismatchException e) {
+        				System.err.println("Enter digits");
+						// TODO: handle exception
+					}
+        		
+        		}
+        		while(!flag1);
+        		
         		System.out.println("Enter the name");
         		String name=scan.next();
+        		double  height=0;
+        		do {
+        			impl=new StudentDaoJpa();
         		System.out.println("Enter the height");
-        		double height=scan.nextDouble();
+        		try {
+        		height=scan.nextDouble();
+        		}
+        		catch (InputMismatchException e) {
+					// TODO: handle exception
+        			System.err.println("Enter the valid number");
+				}
+        		
+        		}
+        		while(!flag1);
         		Student s=new Student(id,name,height);
-        		impl=new StudentDaoJpa();
+        		
         		if(!(impl.addStudent(s)==null))
         		{
         			System.out.println("Added");
@@ -56,10 +84,21 @@ public class App
         		break;
         	case 2:
         		scan=new Scanner(System.in);
+        		boolean flag2 = false;int idForRemoval=0;
+        		do {
+        			impl=new StudentDaoJpa();
         		System.out.println("Enter the id");
-        		int idForRemoval =scan.nextInt();
-        		
-        		impl=new StudentDaoJpa();
+        		try {
+        			
+        		idForRemoval =scan.nextInt();
+        		flag2=true;
+        		}
+        		catch (InputMismatchException e) {
+					// TODO: handle exception
+        			System.out.println("Exception caught please enter number");
+				}
+        		}while(!flag2);
+        	
         		if(!(impl.removeStudent(idForRemoval)==false))
         		{
         			System.out.println("removed");
@@ -69,11 +108,22 @@ public class App
         		}
         		break;
         	case 3:
+        		boolean flag3=false;
+        		int idForFind=0;
         		scan=new Scanner(System.in);
+        		do {
+        			impl=new StudentDaoJpa();
         		System.out.println("Enter the id");
-        		int idForFind =scan.nextInt();
+        		try {
+        			idForFind =scan.nextInt();
+				} catch (Exception e) {
+					// TODO: handle exception
+					System.out.println("Enter number");
+				}
         		
-        		impl=new StudentDaoJpa();
+        		}
+        		while(!flag3);
+        		
         		if((impl.findStudent(idForFind)==null))
         		{
         			System.out.println("Not Exist");
