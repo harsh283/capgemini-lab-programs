@@ -1,6 +1,11 @@
-package com.capg.ui;
+package com.capg.programme1and2;
 
 public class Employee {
+	@Override
+	public String toString() {
+		return "Employee [employeeId=" + employeeId + ", employeeName=" + employeeName + ", salary=" + salary
+				+ ", busiessUnit=" + busiessUnit + "]";
+	}
 	private int employeeId;
 	private String employeeName;
 	private double salary;

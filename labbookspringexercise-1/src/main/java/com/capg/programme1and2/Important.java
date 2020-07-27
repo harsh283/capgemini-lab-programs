@@ -1,4 +1,4 @@
-package com.capg.ui;
+package com.capg.programme1and2;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -14,11 +14,6 @@ public class Important
        //ApplicationContext context = 
     	ApplicationContext context=new ClassPathXmlApplicationContext("spring.xml");
     	Employee emp=(Employee)context.getBean("employee");
-    	System.out.println(emp.getEmployeeId());
-    	emp.getEmployeeName();
-    	emp.getSalary();
-    	System.out.println(emp.getBusiessUnit());
-    	emp.getSalary();
-    	emp.getSbuDetails();
+    	System.out.println(emp);
     }
 }

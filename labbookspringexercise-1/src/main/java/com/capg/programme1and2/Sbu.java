@@ -1,4 +1,4 @@
-package com.capg.ui;
+package com.capg.programme1and2;
 
 public class Sbu {
 	private int sbuId;
