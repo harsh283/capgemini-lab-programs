@@ -7,7 +7,7 @@ public class Important {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-ApplicationContext context = new ClassPathXmlApplicationContext("spring2");
+ApplicationContext context = new ClassPathXmlApplicationContext("spring2.xml");
 Sbu business=(Sbu)context.getBean("sbu");
 System.out.println(business);
 	}

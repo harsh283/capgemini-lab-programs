@@ -1,12 +1,13 @@
 package com.capg.programme3;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Sbu {
 private int sbuCode;
 private String sbuName;
 private String subHead;
-private List<Employee> empList;
+private ArrayList<Employee> empList;
 public int getSbuCode() {
 	return sbuCode;
 }
@@ -25,10 +26,14 @@ public String getSubHead() {
 public void setSubHead(String subHead) {
 	this.subHead = subHead;
 }
-public List<Employee> getEmpList() {
+public ArrayList<Employee> getEmpList() {
 	return empList;
 }
-public void setEmpList(List<Employee> empList) {
+public void setEmpList(ArrayList<Employee> empList) {
 	this.empList = empList;
+}
+@Override
+public String toString() {
+	return "Sbu [sbuCode=" + sbuCode + ", sbuName=" + sbuName + ", subHead=" + subHead + ", empList=" + empList + "]";
 }
 }

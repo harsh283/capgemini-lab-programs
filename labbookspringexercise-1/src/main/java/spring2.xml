@@ -6,11 +6,10 @@
             <bean id="sbu" class="com.capg.programme3.Sbu">
     <property name="sbuCode" value="1"></property>
     <property name="sbuName" value="Mani"></property>
-    <property name="sbuHead" value="Head"></property>
+    <property name="subHead" value="Head"></property>
        <property name="empList">
        <list>
-       <value>akhil</value>
-       <value>saimede</value>
+          <ref bean="employee" />
        </list>
        </property> 
         </bean>
