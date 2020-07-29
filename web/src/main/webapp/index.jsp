@@ -1,4 +1,3 @@
 <html>
-
-<h2>hello</h2>
+<form  action="my"></form>
 </html>
