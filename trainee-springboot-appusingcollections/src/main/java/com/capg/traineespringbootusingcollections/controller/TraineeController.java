@@ -22,7 +22,7 @@ public String getLoginPage()
 {
 	return "loginpage";
 }
-@PostMapping("/firstpage")
+@PostMapping("/login")
 public String redirectToOperations(@RequestParam("username") String name,@RequestParam("password") String password,Model m)
 {
 	if(name.equals("harsh")&& password.equals("kumar"))
@@ -49,6 +49,7 @@ public String removeTrainee(@RequestParam ("id") int id,Model m)
 	
 		if(service.removeTrainee(id))
 		{
+			m.addAttribute("remove","Removed successfully");
 			return "firstpage";
 		}
 		else

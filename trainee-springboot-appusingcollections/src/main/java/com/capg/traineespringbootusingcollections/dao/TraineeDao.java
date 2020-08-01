@@ -12,6 +12,7 @@ public class TraineeDao {
 	public Trainee addTrainee(Trainee t1)
 	{
 		traineeMap.put(t1.getId(), t1);
+		
 		return t1;
 	}
 	public boolean removeTrainee(int id)
