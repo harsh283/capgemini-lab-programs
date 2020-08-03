@@ -42,7 +42,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
+			<scope>compile</scope>
 			<exclusions>
 				<exclusion>
 					<groupId>org.junit.vintage</groupId>
@@ -50,6 +50,12 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
+			<!-- https://mvnrepository.com/artifact/org.apache.tomcat/tomcat-jasper -->
+<dependency>
+    <groupId>org.apache.tomcat</groupId>
+    <artifactId>tomcat-jasper</artifactId>
+    <version>9.0.37</version>
+</dependency>
 	</dependencies>
 
 	<build>

@@ -37,6 +37,7 @@ public Student addStudent(Student student) throws StudentAlreadyExists, StudentA
 }
 public Student getStudent(int id) throws StudentNotFoundException
 {
+	
 	if(dao.getOne(id)==null)
 	{
 		throw new StudentNotFoundException("Student with id "+id+" doesnot exist");
